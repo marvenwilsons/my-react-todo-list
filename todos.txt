@@ -1,0 +1,2 @@
+1. add firebase databae
+2. add user system
