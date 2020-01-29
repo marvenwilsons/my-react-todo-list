@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
 
 export class addTodo extends Component {
     state = {
@@ -39,16 +40,19 @@ export class addTodo extends Component {
             {/* todo description */}
             <div>
                 <div>Todo Description:</div>
-                <textarea onChange={(e) => {this.setState({desc: e.target.value})}} cols="50" rows="5" ></textarea>
+                <textarea className="fullwidth" onChange={(e) => {this.setState({desc: e.target.value})}} cols="20" rows="5" ></textarea>
             </div>
             {/* submit */}
             <div className="flex flexend pointer" style={{marginTop:'5px'}}>
                 {/* {this.addTodoComp()} */}
-                <button 
+                <Button>
+                    Add Todo
+                </Button>
+                {/* <button 
                     onClick={() =>addTodoMethod({title: this.state.title, desc: this.state.desc})}
                 >
                     Add Todo
-                </button>
+                </button> */}
             </div>
         </div>
         )
