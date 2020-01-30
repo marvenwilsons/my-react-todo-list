@@ -69,7 +69,7 @@ h6 {
 
 q {
   font-style: italic;
-  quotes: "" "";
+  quotes: """";
 }
 
 img {
@@ -584,4 +584,8 @@ body {
 /* react my own style*/
 .pacifico {
   font-family: "Pacifico", cursive;
+}
+
+.accent {
+  color: #f50057
 }
