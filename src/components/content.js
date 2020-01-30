@@ -25,24 +25,34 @@ export class content extends Component {
   }
 
   receivedTodo = ({ title, desc }) => {
-    const newTodo = {
-      title,
-      desc,
-      id: uuid.v4(),
-      deadLine: "",
-      completed: "",
-      completedOn: "",
-      createdOn: ""
-    };
+    if (title.trim() == "" || !title) {
+      console.log("title is undefined");
+    } else if (desc.trim() == "" || !desc) {
+      console.log("desc is undefined");
+    } else if (
+      title.trim() != "" ||
+      (title != undefined && desc.trim() != "") ||
+      desc != undefined
+    ) {
+      const newTodo = {
+        title,
+        desc,
+        id: uuid.v4(),
+        deadLine: "",
+        completed: "",
+        completedOn: "",
+        createdOn: ""
+      };
 
-    if (this.state.todos.length === 0) {
-      this.setState({
-        todos: [newTodo]
-      });
-    } else {
-      this.setState({
-        todos: [...this.state.todos, newTodo]
-      });
+      if (this.state.todos.length === 0) {
+        this.setState({
+          todos: [newTodo]
+        });
+      } else {
+        this.setState({
+          todos: [...this.state.todos, newTodo]
+        });
+      }
     }
   };
 
