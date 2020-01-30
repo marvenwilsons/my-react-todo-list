@@ -589,3 +589,8 @@ body {
 .accent {
   color: #f50057
 }
+
+.textboldhover:hover {
+  color: rgba(51, 51, 51, 0.568);
+  transition: 0.3s;
+}

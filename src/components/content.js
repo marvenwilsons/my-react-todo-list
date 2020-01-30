@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import AddTodoComponent from "./addTodo";
+import AddTodoComponent from "./mylist/addlist";
 import ShowTodos from "./showTodos";
 import uuid from "uuid";
 

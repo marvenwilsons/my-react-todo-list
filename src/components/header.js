@@ -17,7 +17,7 @@ export class header extends Component {
   render() {
     return (
       <div className="flex spacebetween " style={this.headerStye()}>
-        <h2
+        <h4
           className="pacifico pad025 flexcenter flex"
           style={{ fontWeight: "100", color: "white" }}
         >
@@ -27,8 +27,8 @@ export class header extends Component {
           >
             <FontAwesomeIcon color="white" icon={faCoffee} />
           </div>
-          My Todo List
-        </h2>
+          Coffe List
+        </h4>
         <div className="flex flexcenter marginright125">
           <span>
             <Link to="/Explore">

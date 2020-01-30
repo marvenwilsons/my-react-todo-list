@@ -11,11 +11,7 @@ import WebFont from "webfontloader";
 import MyHeader from "./components/header";
 import MyContent from "./components/content";
 
-import {
-  useRouteMatch,
-  BrowserRouter as Router,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // my pages
 import Err from "./pages/err";
@@ -44,7 +40,6 @@ function App() {
         <Route path="/mylist">
           <MyHeader />
           <MyLists />
-          hello
         </Route>
         {/* My List Contents */}
         <Route path="/mylistContents/:listID">
