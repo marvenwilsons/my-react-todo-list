@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
+import ContentPane from "../components/listcontents/content";
 
 // A simple component that shows the pathname of the current location
 class listContent extends React.Component {
@@ -10,16 +11,28 @@ class listContent extends React.Component {
     history: PropTypes.object.isRequired
   };
 
-  render() {
-    const { match, location, history } = this.props;
+  // state
+  state = {
+    panes: [{}]
+  };
 
-    console.log(match);
+  render() {
+    // props
+    const { match, location, history } = this.props;
 
     // return <div>You are now at {location.pathname}</div>;
     return (
-      <div className="borderred fullheight-percent relative">
-        <div className="relative pad125 borderred fullheight-percent absolute">
-          test
+      <div
+        style={{ background: "whitesmoke", overflowY: "hidden" }}
+        className="fullheight-percent relative"
+      >
+        <div className="relative pad125 fullheight-percent absolute flex">
+          {this.state.panes.map((Context, ContextIndex) => (
+            <ContentPane
+              Context={Context}
+              ContextIndex={ContextIndex}
+            ></ContentPane>
+          ))}
         </div>
       </div>
     );
