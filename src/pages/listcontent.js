@@ -13,7 +13,13 @@ class listContent extends React.Component {
 
   // state
   state = {
-    panes: [{}]
+    panes: [
+      {
+        listTitle:
+          "A long title, I dont know why this title is so long, but its very long."
+      },
+      { listTitle: "This is a medium long title" }
+    ]
   };
 
   render() {

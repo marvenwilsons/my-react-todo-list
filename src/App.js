@@ -21,6 +21,7 @@ import ListContent from "./pages/listcontent";
 import MyAcc from "./pages/myacc";
 import MyLists from "./pages/mylist";
 import SignUp from "./pages/signup";
+import MyFriends from "./pages/myfriends";
 
 WebFont.load({
   google: {
@@ -56,12 +57,17 @@ function App() {
           <MyHeader />
           <MyAcc />
         </Route>
+        {/* My Friends */}
+        <Route path="/MyFriends">
+          <MyHeader />
+          <MyFriends />
+        </Route>
         {/* Error */}
         <Route path="/Error">
           <MyHeader />
           <Err />
         </Route>
-        {/* done */}
+        {/* SignUp */}
         <Route path="/SignUp">
           <SignUp />
         </Route>

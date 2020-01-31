@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import { Button, Paper, Avatar } from "@material-ui/core";
+import { Button, Paper, Avatar, Divider } from "@material-ui/core";
 import { Badge } from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faThumbsUp,
+  faThumbsDown,
+  faEdit
+} from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 
@@ -37,8 +41,8 @@ export class allList extends Component {
                 maxWidth: "1080px"
               }}
             >
-              <div className="flex spacebetween padtop125">
-                <h4>Your Lists</h4>
+              <div className="flex spacebetween padtop125 marginbottom125">
+                <h4 className="pacifico">Your Lists</h4>
                 <Button
                   onClick={() => {
                     showAddListForm(true);
@@ -50,13 +54,14 @@ export class allList extends Component {
                   <strong>create new list</strong>
                 </Button>
               </div>
+              <Divider></Divider>
             </div>
           </div>
           <div
             style={{
               maxWidth: "1080px"
             }}
-            className="fullwidth flex flexwrap flexstart"
+            className="fullwidth flex flexwrap flexstart margintop050"
           >
             {/* on click redirect to myListContent/listID */}
             {list.map((e, i) => (
@@ -106,7 +111,10 @@ export class allList extends Component {
                       <span className="padright125">
                         <FontAwesomeIcon color="gray" icon={faThumbsDown} /> 5K
                       </span>
-                      <span>40K comments</span>
+                      <span>
+                        <FontAwesomeIcon color="gray" icon={faEdit} />
+                        <span className="padright125"> Edit List </span>
+                      </span>
                     </div>
                   </div>
                 </Paper>
