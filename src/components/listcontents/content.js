@@ -27,13 +27,9 @@ export class content extends Component {
               <div className="padbottom025 flex flexend"></div>
               <Divider></Divider>
               {/*  */}
-              <Card
-                elavation={5}
-                className="pad025 marginbottom125 margintop125"
-                elavation={3}
-              >
+              <div className="pad025 marginbottom125 margintop125">
                 <div className="fullwidth pad050">Context</div>
-              </Card>
+              </div>
               <Divider></Divider>
 
               <div className="pad025">
