@@ -1,0 +1,28 @@
+Data Structure
+
+List
+    listTitle
+    desc
+    tags
+    listId
+    listItems
+    listCreateBy: reference to user id
+    listCreatedOn
+    listComments
+    thumbsUp
+    thumbsDown
+    categoriesBelongTo
+    views
+    versionNum
+    referenceBy: [] a list of userId referencing this list
+    removeToMyListFeed: false
+    
+User
+    username
+    password
+    lists: [] a list of listId reference
+    collections: [] alist of listId reference
+    avatar
+    subscribers: [] a list of listId reference
+    token
+    friends: [] a list of listId reference

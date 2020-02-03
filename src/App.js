@@ -22,6 +22,7 @@ import MyAcc from "./pages/myacc";
 import MyLists from "./pages/mylist";
 import SignUp from "./pages/signup";
 import MyFriends from "./pages/myfriends";
+import Login from "./pages/login";
 
 WebFont.load({
   google: {
@@ -39,37 +40,41 @@ function App() {
         <Route exact path="/" component={Home} />
         {/* my list */}
         <Route path="/mylist">
-          <MyHeader />
+          <MyHeader width={"1080px"} />
           <MyLists />
         </Route>
         {/* My List Contents */}
         <Route path="/mylistContents/:listID">
-          <MyHeader />
+          <MyHeader width={"100%"} />
           <ListContent />
         </Route>
         {/* Explore */}
         <Route path="/explore">
-          <MyHeader />
+          <MyHeader width={"1080px"} />
           <Explore />
         </Route>
         {/* My Account */}
         <Route path="/myAccount">
-          <MyHeader />
+          <MyHeader width={"1080px"} />
           <MyAcc />
         </Route>
         {/* My Friends */}
         <Route path="/MyFriends">
-          <MyHeader />
+          <MyHeader width={"1080px"} />
           <MyFriends />
         </Route>
         {/* Error */}
         <Route path="/Error">
-          <MyHeader />
+          <MyHeader width={"100%"} />
           <Err />
         </Route>
         {/* SignUp */}
         <Route path="/SignUp">
           <SignUp />
+        </Route>
+        {/* lgoin */}
+        <Route path="/Login">
+          <Login />
         </Route>
       </Router>
     </div>

@@ -16,10 +16,14 @@ export class content extends Component {
         className="flex fullheight-percent marginright125"
         style={{ width: "700px" }}
       >
-        <Paper elevation={3} className="fullwidth flex flexcol">
+        <Paper
+          elevation={3}
+          style={{ borderRadius: "8px" }}
+          className="fullwidth flex flexcol"
+        >
           <div className="fullheight-percent relative">
             <div className="absolute pad125 fullwidth">
-              <div className="fullwidth margintop125 marginbottom125">
+              <div className="fullwidth marginbottom125">
                 <div>
                   <h3>{Context.listTitle}</h3>
                 </div>

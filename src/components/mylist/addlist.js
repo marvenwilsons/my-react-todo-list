@@ -90,7 +90,7 @@ export class addTodo extends Component {
                   })
                 }
                 variant="contained"
-                color="secondary"
+                color="primary"
               >
                 <strong>Create List</strong>
               </Button>

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Avatar, Badge } from "@material-ui/core";
 
+import Cllogo from "../favicon_io/favicon-32x32.png";
+
 import { Link } from "react-router-dom";
 
 import {
@@ -21,60 +23,70 @@ export class header extends Component {
 
   // template
   render() {
+    const { width } = this.props;
     return (
-      <div className="flex spacebetween " style={this.headerStye()}>
-        <h4
-          className="pacifico pad025 flexcenter flex pointer"
-          style={{ fontWeight: "100", color: "white" }}
-        >
-          <div className="pad125" style={{ borderRadius: "200px" }}>
-            <FontAwesomeIcon color="white" icon={faCoffee} />
+      <div className="flex flexcenter" style={this.headerStye()}>
+        <div className="flex spacebetween" style={{ width }}>
+          <div
+            className={`flex padtop025 padbottom025 ${
+              width === "100%" ? "marginleft125" : ""
+            } `}
+          >
+            <div className="flex flexcenter padtop050 padbottom050">
+              {/* <FontAwesomeIcon color="white" icon={faCoffee} /> */}
+              <img src={Cllogo}></img>
+            </div>
+            <h4
+              className="pacifico pad025 flexcenter flex pointer"
+              style={{ fontWeight: "100", color: "white" }}
+            >
+              Coffe List
+            </h4>
           </div>
-          Coffe List
-        </h4>
-        <div className="flex flexcenter marginright125">
-          <span>
-            <Link to="/Explore">
+          <div className="flex flexcenter">
+            <span>
+              <Link to="/Explore">
+                <span
+                  style={{ color: "white" }}
+                  className="marginright125 pacifico"
+                >
+                  Explore
+                </span>
+              </Link>
+            </span>
+
+            <Link to="/MyList">
               <span
                 style={{ color: "white" }}
                 className="marginright125 pacifico"
               >
-                Explore
+                My List
               </span>
             </Link>
-          </span>
-
-          <Link to="/MyList">
-            <span
-              style={{ color: "white" }}
-              className="marginright125 pacifico"
-            >
-              My List
+            <Link to="/MyFriends">
+              <span
+                style={{ color: "white" }}
+                className="marginright125 pacifico"
+              >
+                My Friends
+              </span>
+            </Link>
+            <span className="marginright125 pointer">
+              <Avatar alt="Name">
+                <FontAwesomeIcon color="white" icon={faBell} />
+              </Avatar>
             </span>
-          </Link>
-          <Link to="/MyFriends">
-            <span
-              style={{ color: "white" }}
-              className="marginright125 pacifico"
-            >
-              My Friends
+            <span className="pointer">
+              <Avatar alt="Name">M</Avatar>
             </span>
-          </Link>
-          <span className="marginright125 pointer">
-            <Avatar alt="Name">
-              <FontAwesomeIcon color="white" icon={faBell} />
-            </Avatar>
-          </span>
-          <span className="pointer">
-            <Avatar alt="Name">M</Avatar>
-          </span>
 
-          {/* <Link to="/myAccount">
+            {/* <Link to="/myAccount">
             <span className="marginright125" style={{ color: "white" }}>
               My Account
             </span>
           </Link>
           <span className="marginright125">Log out</span> */}
+          </div>
         </div>
       </div>
     );

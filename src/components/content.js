@@ -82,7 +82,7 @@ export class content extends Component {
             {this.state.showModal}
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               onClick={e => this.addTodo(e)}
             >
               <strong>Add A Todo Item</strong>

@@ -48,7 +48,7 @@ export class allList extends Component {
                     showAddListForm(true);
                   }}
                   variant="contained"
-                  color="secondary"
+                  color="primary"
                   type="submit"
                 >
                   <strong>create new list</strong>

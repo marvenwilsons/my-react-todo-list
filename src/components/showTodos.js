@@ -36,12 +36,12 @@ export class showTodos extends Component {
             <span className="pointer">
               <Button
                 variant="contained"
-                color="secondary"
+                color="primary"
                 style={{ marginRight: "20px" }}
               >
                 <strong>Add New Todo</strong>
               </Button>
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" color="primary">
                 <strong>Show Completed Todos</strong>
               </Button>
             </span>
